@@ -1,0 +1,81 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    height: 150vh;
+    margin: 0;
+    background-color: #333333;
+    place-items: center;
+}
+.calendar{
+    background-color: #111111;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #222222;
+    overflow: hidden;
+    width: 300px;
+    padding: 20px;
+    color: white;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.btn{
+    cursor: pointer;
+}
+#month-year{
+    font-weight: bold;
+    font-size: 20px;
+}
+/* #days{
+
+} */
+.weekdays , .days{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.days{
+    height: 240px;
+ }
+ .weekdays div,.days div{
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+ }
+ .days div{
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+ }
+ .days div:hover{
+    background: white;
+    color: rgb(255, 145, 0);
+ }
+ .days .today{
+    background-color: orangered;
+    color: white;
+ }
+
+ .days .fade{
+    color: #555;
+ }
+
+ .calendar{
+    /* border: 0.5px groove rgb(255, 17, 0); */
+    box-shadow: 0 0 10px 2px rgb(255, 230, 0);    
+    margin-top: -150px;
+    
+}
+ .first{
+    display: flex;
+    margin-top: -40px;
+    margin-bottom: -80px;
+ }
+
+ body{
+    overflow-y: hidden;
+    background: linear-gradient(135deg,red,black,black)
+}
