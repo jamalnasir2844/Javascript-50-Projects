@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Color button{
+    font-size: larger;
+    font-weight: 600;
+    height: 70px;
+    width: 180px;
+    text-transform: capitalize;
+}
+.Color button:hover{
+    background-color: rgb(86, 88, 88);
+    color: white;
+}
