@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveCast - Beautiful Weather</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons for premium aesthetic -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Floating Animated Background Elements -->
+        <div class="blob shape-1"></div>
+        <div class="blob shape-2"></div>
+
+        <main class="glass-card">
+            <!-- Search Section -->
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Search for a city..." autocomplete="off">
+                <button id="search-btn" aria-label="Search"><i class="ph ph-magnifying-glass"></i></button>
+            </div>
+
+            <!-- Error State -->
+            <div class="error-message" id="error-message" style="display: none;">
+                <i class="ph ph-warning-circle"></i>
+                <span id="error-text">City not found. Please try again.</span>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-state" id="loading-state" style="display: none;">
+                <i class="ph ph-spinner-gap spinner"></i>
+                <span>Fetching live weather...</span>
+            </div>
+
+            <!-- Weather Information Panel -->
+            <div class="weather-info" id="weather-info">
+                <!-- Header: Location & Date -->
+                <div class="weather-header">
+                    <h1 class="location-name" id="location-name">New York, US</h1>
+                    <p class="current-date" id="current-date">Monday, 24 Oct</p>
+                </div>
+
+                <!-- Main Temperature & Icon -->
+                <div class="main-weather">
+                    <div class="weather-icon-container">
+                        <i class="ph-fill ph-sun" id="main-icon"></i>
+                    </div>
+                    <div class="temperature-block">
+                        <h2 class="temperature" id="temperature">24<span class="unit">°C</span></h2>
+                        <p class="weather-condition" id="weather-description">Clear Sky</p>
+                    </div>
+                </div>
+
+                <!-- Extras Details Grid -->
+                <div class="weather-details">
+                    <!-- Detail Item: Feels Like -->
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="ph-fill ph-thermometer"></i></div>
+                        <div class="detail-info">
+                            <span class="detail-label">Feels Like</span>
+                            <span class="detail-value" id="feels-like">26°C</span>
+                        </div>
+                    </div>
+                    <!-- Detail Item: Humidity -->
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="ph-fill ph-drop"></i></div>
+                        <div class="detail-info">
+                            <span class="detail-label">Humidity</span>
+                            <span class="detail-value" id="humidity">45%</span>
+                        </div>
+                    </div>
+                    <!-- Detail Item: Wind Speed -->
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="ph-fill ph-wind"></i></div>
+                        <div class="detail-info">
+                            <span class="detail-label">Wind Speed</span>
+                            <span class="detail-value" id="wind-speed">12 km/h</span>
+                        </div>
+                    </div>
+                    <!-- Detail Item: Pressure -->
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="ph-fill ph-target"></i></div>
+                        <div class="detail-info">
+                            <span class="detail-label">Pressure</span>
+                            <span class="detail-value" id="pressure">1012 hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Welcome placeholder initially -->
+            <div class="welcome-message" id="welcome-message">
+                <div class="welcome-icon">
+                    <i class="ph-fill ph-globe-hemisphere-west"></i>
+                </div>
+                <h2>Welcome to LiveCast</h2>
+                <p>Search for any city to get live, up-to-date weather conditions dynamically fetched around the world.
+                </p>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Script included at the end for performance -->
+    <script src="script.js"></script>
+</body>
+
+</html>
